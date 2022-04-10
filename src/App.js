@@ -1,10 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
+import Main from './pages/Main/Main';
+// import ListOfProducts from './pages/ListOfProducts';
+import { Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-     <Header />
+      <div className='page'>
+      <Header />
+      <Main />
+      {/* <Route path="/" exact component={Main} /> */}
+      {/* <Route path="/ListOfProducts" exact component={ListOfProducts} /> */}
+      </div>
     </div>
   );
 }

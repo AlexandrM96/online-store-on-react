@@ -10,38 +10,40 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <div className="header__logo">
-                    <img src={Group_165} alt="logo" />
-                </div>
-                <ul className="header__navigation">
-                    <li>
-                        <Link className='header__navigation-link' to="/">HOME</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navigation-link' to="/">ABOUTE</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navigation-link' to="/">PRODUCT</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navigation-link' to="/">BLOG</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navigation-link' to="/">SHOP</Link>
-                    </li>
-                    <li>
-                        <Link className='header__navigation-link' to="/">CONTACT US</Link>
-                    </li>
-                </ul>
-                <div className="header__user-space">
-                    <div>
-                        <img src={Group_10} className="load__img" alt="magnifier" />
+                <div className='header__container'>
+                    <div className="header__logo">
+                        <img src={Group_165} alt="logo" />
                     </div>
-                    <div>
-                        <img src={Group_12} className="load__img" alt="cart" />
-                    </div>
-                    <div>
-                        <img src={Group_15} className="load__img" alt="auth" />
+                    <ul className="header__navigation">
+                        <li>
+                            <Link className='header__navigation-link' to="/">HOME</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navigation-link' to="/">ABOUTE</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navigation-link' to="/">PRODUCT</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navigation-link' to="/">BLOG</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navigation-link' to="/">SHOP</Link>
+                        </li>
+                        <li>
+                            <Link className='header__navigation-link' to="/">CONTACT US</Link>
+                        </li>
+                    </ul>
+                    <div className="header__user-space">
+                        <div>
+                            <img src={Group_10} className="load__img" alt="magnifier" />
+                        </div>
+                        <div>
+                            <img src={Group_12} className="load__img" alt="cart" />
+                        </div>
+                        <div>
+                            <img src={Group_15} className="load__img" alt="auth" />
+                        </div>
                     </div>
                 </div>
             </header>

@@ -1,0 +1,80 @@
+.hero-aria {
+  display: flex;
+  padding-left: 230px;
+  padding-right: 144px;
+}
+
+.hero-aria__article-one {
+  width: 46%;
+  margin-right: 26px;
+}
+
+.hero-aria__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  color: #dd7c86;
+  margin-top: 129px;
+  margin-bottom: 0px;
+}
+
+.hero-aria__paragraph-one {
+  font-weight: 600;
+  font-size: 61px;
+  line-height: 73px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.hero-aria__paragraph-span {
+  color: #247cc0;
+  background: #e9f2f9;
+  padding: 5px;
+}
+
+.hero-aria__paragraph-two {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #757a7f;
+  margin-top: 29px;
+  margin-bottom: 56px;
+}
+
+.hero-aria__shop-price {
+  display: flex;
+}
+
+.hero-aria__button {
+  background: #247cc0;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  padding: 16px 35px;
+}
+
+.hero-aria__price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #030d15;
+  padding-left: 21px;
+}
+
+.hero-aria__article-two {
+  margin-top: 54px;
+}
+
+.hero-aria__brands {
+  display: flex;
+  padding: 76px 118px;
+}
+
+.hero-aria__brand {
+  margin-right: 84px;
+}

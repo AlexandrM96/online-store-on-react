@@ -20,15 +20,17 @@ const initialState = {
         },
         {
             id: 3,
-            title: "Что-то там",
-            description: "Что-то еще",
-            price: 3000
+            title: "Beats studio",
+            description: "The standard chunk of Lorem Ipsum below for those interested. The standard chunk of for those interested.",
+            price: 300,
+            raiting: 4
         },
         {
             id: 4,
-            title: "А потом вот это",
-            description: "А потом вот это",
-            price: 10000
+            title: "Black iPhone Speaker",
+            description: "The standard chunk of Lorem Ipsum below for those interested. The standard chunk of for those interested.",
+            price: 230,
+            raiting: 4
         }
     ]
 }

@@ -27,7 +27,7 @@ class HeroAria extends Component {
                                 SHOP NOW
                             </button>
                             <div className='hero-aria__price'>
-                                $ 249.99
+                                $ 249.99 <span className='hero-aria__price-span'>$ 249.99</span>
                             </div>
                         </div>
                     </article>

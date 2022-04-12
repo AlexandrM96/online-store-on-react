@@ -5,6 +5,7 @@
 
 .recent-product__items {
   display: flex;
+  margin-bottom: 160px;
 }
 
 .recent-product__item {

@@ -160,7 +160,13 @@
   background: black;
 }
 
+.pupuler-product__view-all-container {
+  display: flex;
+  justify-content: center;
+}
+
 .pupuler-product__view-all-button {
+  width: 10%;
   display: flex;
   justify-content: center;
   font-weight: 600;
@@ -169,6 +175,7 @@
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
+  margin-bottom: 100px;
 }
 
 .pupuler-product__view-all-button:hover {

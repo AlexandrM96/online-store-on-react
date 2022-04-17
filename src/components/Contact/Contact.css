@@ -1,0 +1,66 @@
+.contact {
+  background: #f4f9fc;
+}
+
+.contact__container {
+  padding-left: 230px;
+  padding-right: 144px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.contact__information {
+    padding-left: 30px;
+}
+
+.contact__information h5 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  color: #df9aa2;
+  margin: 0;
+  padding-right: 70%;
+}
+
+.contact__information h4 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.contact__information p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #90989d;
+  margin: 0;
+  padding-right: 100px;
+}
+
+.contact__mail-input-and-button {
+    padding-top: 40px;
+}
+
+.contact__mail-input {
+  padding: 12px 26px;
+}
+
+.contact__mail-button {
+  background: #247cc0;
+  padding: 14px 27px;
+  color: white;
+  border: 0;
+}
+
+.contact__mail-button:hover {
+  background: #3a88c4;
+  cursor: pointer;
+}

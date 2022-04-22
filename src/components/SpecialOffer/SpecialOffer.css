@@ -1,6 +1,9 @@
 .special-offer {
   padding-left: 230px;
   padding-right: 144px;
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
 }
 .special-offer__container {
   display: flex;

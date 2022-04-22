@@ -19,19 +19,19 @@ class Header extends Component {
                             <Link className='header__navigation-link' to="/">HOME</Link>
                         </li>
                         <li>
-                            <Link className='header__navigation-link' to="/">ABOUTE</Link>
+                            <Link className='header__navigation-link' to="/aboute">ABOUTE</Link>
                         </li>
                         <li>
-                            <Link className='header__navigation-link' to="/">PRODUCT</Link>
+                            <Link className='header__navigation-link' to="/allItems">PRODUCT</Link>
                         </li>
                         <li>
-                            <Link className='header__navigation-link' to="/">BLOG</Link>
+                            <Link className='header__navigation-link' to="/blog">BLOG</Link>
                         </li>
                         <li>
-                            <Link className='header__navigation-link' to="/">SHOP</Link>
+                            <Link className='header__navigation-link' to="/shop">SHOP</Link>
                         </li>
                         <li>
-                            <Link className='header__navigation-link' to="/">CONTACT US</Link>
+                            <Link className='header__navigation-link' to="/contact">CONTACT US</Link>
                         </li>
                     </ul>
                     <div className="header__user-space">
@@ -39,7 +39,9 @@ class Header extends Component {
                             <img src={Group_10} className="load__img" alt="magnifier" />
                         </div>
                         <div>
-                            <img src={Group_12} className="load__img" alt="cart" />
+                            <Link to="/card">
+                                <img src={Group_12} className="load__img" alt="cart" />
+                            </Link>
                         </div>
                         <div>
                             <img src={Group_15} className="load__img" alt="auth" />

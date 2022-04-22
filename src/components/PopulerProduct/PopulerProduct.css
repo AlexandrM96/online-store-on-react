@@ -1,4 +1,8 @@
-.populer-product {
+
+.populer-product__container {
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
   padding-left: 230px;
   padding-right: 144px;
   margin-top: 125px;
@@ -98,6 +102,11 @@
   color: #a2a6a9;
 }
 
+.populer-product-rating {
+  display: flex;
+  margin-top: 7px;
+}
+
 .populer-procuct_image {
   margin: auto;
   height: 243px;
@@ -176,6 +185,8 @@
   text-transform: uppercase;
   transition: 0.3s;
   margin-bottom: 100px;
+  color: #c72535;
+  text-decoration: none;
 }
 
 .pupuler-product__view-all-button:hover {

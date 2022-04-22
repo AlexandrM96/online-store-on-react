@@ -8,6 +8,9 @@
   justify-content: space-between;
   padding-left: 230px;
   padding-right: 230px;
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .header__logo img {

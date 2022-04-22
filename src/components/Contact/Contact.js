@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 class Contact extends Component {
+    
     render() {
+        
         return(
             <section className='contact'>
                 <div className='contact__container'>

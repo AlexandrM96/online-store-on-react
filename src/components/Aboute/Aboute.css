@@ -1,12 +1,15 @@
 .aboute {
-  padding-top: 80px;
-  padding-left: 230px;
-  padding-right: 144px;
   background: linear-gradient(to top, #f4f9fc 65%, white 35%);
 }
 
 .aboute__container {
   display: flex;
+  padding-top: 80px;
+  padding-left: 230px;
+  padding-right: 144px;
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .aboute__info {

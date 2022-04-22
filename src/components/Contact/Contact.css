@@ -3,6 +3,9 @@
 }
 
 .contact__container {
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
   padding-left: 230px;
   padding-right: 144px;
   padding-top: 100px;

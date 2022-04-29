@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Shop.css';
+import { ApiRequestAddCart } from '../../../API/ApiRequest';
 // логотипы корзины
 import CART from '../button-img/Group_54.svg';
 import LUPA from '../button-img/Group_55.svg';
@@ -12,8 +13,13 @@ class ShopItems extends Component {
         statusItem: false,
 
     }
+
+    clickButtonCart = (id) => {
+        ApiRequestAddCart(id);
+    }
+
     render() {
-        const { img, price } = this.props;
+        const { img, price, id } = this.props;
         return (
             <div
                 className='shop__items_container'
@@ -38,7 +44,9 @@ class ShopItems extends Component {
                         :
                         'shop__item-buttons'
                     }>
-                    <div className='shop__item-button'>
+                    <div className='shop__item-button'
+                    onClick={() => this.clickButtonCart(id)} type="button"
+                    > 
                         <img src={CART} alt='CART' />
                     </div>
                     <div className='shop__item-button'>

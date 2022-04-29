@@ -21,7 +21,7 @@ class Shop extends Component {
     };
 
     render() {
-        console.log(this.state.data);
+
         return (
             <section className='shop'>
                 <div className='shop__container'>

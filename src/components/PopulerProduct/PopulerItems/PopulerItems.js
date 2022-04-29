@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../PopulerProduct.css';
-import { ApiRequest } from '../../../API/ApiRequest';
-import store from '../../../redux/store';
+import { ApiRequestAddCart } from '../../../API/ApiRequest';
 // логотипы корзины
 import CART from '../button-img/Group_54.svg';
 import LUPA from '../button-img/Group_55.svg';
@@ -17,18 +16,13 @@ class PopulerItems extends Component {
         rating: 5
     }
 
-    componentDidMount = () => {
-        ApiRequest();
-        store.subscribe(() => {
-            const state = store.getState();
-            this.setState({
-                data: state.newItems[0]
-            });
-        });
-    };
+    clickButtonCart = (id) => {
+        ApiRequestAddCart(id);
+     }
+ 
 
     render() {
-        const { img, name, price } = this.props;
+        const { img, name, price, id } = this.props;
         return (
             <div
                 className='populer-product__item'
@@ -64,7 +58,9 @@ class PopulerItems extends Component {
                     :
                     <div>
                         <div className='populer-product__items-buttons'>
-                            <div className='populer-product__item-button'>
+                            <div className='populer-product__item-button'
+                            onClick={() => this.clickButtonCart(id)} type="button"
+                            >
                                 <img src={CART} alt='CART' />
                             </div>
                             <div className='populer-product__item-button'>

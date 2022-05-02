@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+
 import './Main.css';
 import HeroAria from '../../components/HeroAria/HeroAria';
 import RecentProduct from '../../components/RecentProduct/RecentProduct';
@@ -9,7 +9,6 @@ import Shop from '../../components/Shop/Shop';
 import Contact from '../../components/Contact/Contact';
 
 function Main() {
-    // render() {
     return (
         <>
             <HeroAria />
@@ -21,7 +20,6 @@ function Main() {
             <Contact />
         </>
     )
-    // }
 }
 
 export default Main

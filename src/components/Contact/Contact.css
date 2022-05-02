@@ -13,11 +13,10 @@
   margin-top: 100px;
   display: flex;
   justify-content: space-around;
-
 }
 
 .contact__information {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .contact__information h5 {
@@ -48,8 +47,14 @@
   padding-right: 100px;
 }
 
+.contact__mail-form {
+  display: flex;
+  align-items: center;
+}
+
 .contact__mail-input-and-button {
-    padding-top: 40px;
+  padding-top: 40px;
+  position: relative;
 }
 
 .contact__mail-input {
@@ -61,6 +66,33 @@
   padding: 14px 27px;
   color: white;
   border: 0;
+}
+
+.contact__mail-img {
+  width: 30px;
+  margin-left: 5px;
+  position: absolute;
+  left: 100%;
+}
+
+.contact__mail-img-none {
+  display: none;
+}
+
+.contact__mail-img img {
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+      transform:rotate(0deg);
+  }
+  100% {
+      transform:rotate(360deg);
+  }
 }
 
 .contact__mail-button:hover {

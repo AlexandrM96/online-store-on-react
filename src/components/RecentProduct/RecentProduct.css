@@ -13,11 +13,21 @@
 
 .recent-product__item {
   display: flex;
-  padding-right: 50px;
+  padding-right: 70px;
+}
+
+.recent-product__item:last-child {
+  display: flex;
+  padding-right: 0px;
 }
 
 .recent-product__item-image {
   margin-right: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recent-product__image {
+  width: 280px;
 }
 
 .recent-product__item-title {
@@ -54,4 +64,8 @@
   text-align: center;
   text-decoration-line: line-through;
   color: #94999c;
+}
+
+.recent-product__item-rating {
+  display: flex;
 }

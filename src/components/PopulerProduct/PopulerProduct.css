@@ -45,6 +45,7 @@
   text-transform: uppercase;
   color: #84898d;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 .populer-product__navigation-element:last-child {
@@ -73,10 +74,20 @@
   padding: 30px;
 }
 
+.populer-product__item-no-sale {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding: 57px 30px 30px 30px;
+}
+
 .populer-product_sale {
   font-weight: 400;
   font-size: 16px;
   line-height: 27px;
+  margin: 0;
 }
 
 .populer-product__item-title {
@@ -95,7 +106,7 @@
 
 .populer-product__item-price__span {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 27px;
   text-align: center;
   text-decoration-line: line-through;

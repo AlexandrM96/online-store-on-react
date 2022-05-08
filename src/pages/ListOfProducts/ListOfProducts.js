@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ApiRequest } from '../../API/ApiRequest';
 import store from '../../redux/store';
 import ListOfItems from './ListOfItems/ListOfItems';
+import './ListOfProducts.css'
 
 class ListOfProducts extends Component {
 
@@ -21,12 +22,12 @@ class ListOfProducts extends Component {
 
     render() {
         return (
-            <section className='populer-product'>
-                <div className='populer-product__container'>
-                    <div className='populer-product__header'>
-                        <h2>All items</h2>
+            <section className='list-of-product'>
+                <div className='list-of-product__container'>
+                    <div className='list-of-product__header'>
+                        <h2>The Linkedtech Items</h2>
                     </div>
-                    <div className='populer-product__items-block'>
+                    <div className='list-of-product__items-block'>
                         {this.state.data && this.state.data.map((item) => (
                                 <ListOfItems {...item}/>
                             ))}

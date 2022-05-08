@@ -18,48 +18,41 @@ class PopulerItems extends Component {
 
     clickButtonCart = (id) => {
         ApiRequestAddCart(id);
-     }
- 
+    }
+
 
     render() {
-        const { img, name, price, id } = this.props;
+        const { img, name, price, id, rating, sale, sale_count } = this.props;
         return (
             <div
-                className='populer-product__item'
+                className={sale === true ? 'populer-product__item' : 'populer-product__item-no-sale'}
                 onMouseOver={() => this.setState({ statusItem: true })}
                 onMouseOut={() => this.setState({ statusItem: false })}
             >
-                <p className='populer-product_sale'>Get up to 20% off Today Only!</p>
+                {sale === true ? <p className='populer-product_sale'>Get up to {sale_count}% off Today Only!</p> : false}
                 <img className='populer-procuct_image' src={img} alt='mouse' />
                 {this.state.statusItem === false ?
                     <div>
                         <h6 className='populer-product__item-title'>{name}</h6>
-                        <p className='populer-product__item-price'>$ {price}
-                            <span className='populer-product__item-price__span'> / $ {price}</span>
-                        </p>
+                        {sale === true ?
+                            <p className='populer-product__item-price'>$ {+price - (+price * (sale_count / 100))}
+                                <span className='populer-product__item-price__span'> / $ {price}</span></p>
+                            :
+                            <p className='populer-product__item-price'>$ {price}</p>
+                        }
                         <div className='populer-product-rating'>
-                            <div className='populer-product__rating-star'>
-                                <img src={RATING} alt='star' />
-                            </div>
-                            <div className='populer-product__rating-star'>
-                                <img src={RATING} alt='star' />
-                            </div>
-                            <div className='populer-product__rating-star'>
-                                <img src={RATING} alt='star' />
-                            </div>
-                            <div className='populer-product__rating-star'>
-                                <img src={RATING} alt='star' />
-                            </div>
-                            <div className='populer-product__rating-star'>
-                                <img src={RATING} alt='star' />
-                            </div>
+                            {this.state.data && Array.apply(null, { length: +rating }).map((e, i) => (
+                                <div className='populer-product__rating-star' key={i}>
+                                    <img src={RATING} alt='star' />
+                                </div>
+                            ))}
                         </div>
                     </div>
                     :
                     <div>
                         <div className='populer-product__items-buttons'>
                             <div className='populer-product__item-button'
-                            onClick={() => this.clickButtonCart(id)} type="button"
+                                onClick={() => this.clickButtonCart(id)} type="button"
                             >
                                 <img src={CART} alt='CART' />
                             </div>
@@ -75,31 +68,18 @@ class PopulerItems extends Component {
                         </div>
                         <div className='populer-product__price__raiting__color'>
                             <div className='populer-product__price-raiting'>
-                                <p className='populer-product__item-price'>$ {price}
-                                    <span className='populer-product__item-price__span'> / $ {price}</span>
-                                </p>
+                                {sale === true ?
+                                    <p className='populer-product__item-price'>$ {+price - (+price * (sale_count / 100))}
+                                        <span className='populer-product__item-price__span'> / $ {price}</span></p>
+                                    :
+                                    <p className='populer-product__item-price'>$ {price}</p>
+                                }
                                 <div className='populer-product-rating'>
-                                    {/* {this.state.data && this.state.data.find(item => item === item.rating) 
-                                .map((item) => (
-                                <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
-                            ))} */}
-                                    <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
-                                    <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
-                                    <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
-                                    <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
-                                    <div className='populer-product__rating-star'>
-                                        <img src={RATING} alt='star' />
-                                    </div>
+                                    {this.state.data && Array.apply(null, { length: +rating }).map((e, i) => (
+                                        <div className='populer-product__rating-star' key={i}>
+                                            <img src={RATING} alt='star' />
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                             <div className='populer-product__color'>

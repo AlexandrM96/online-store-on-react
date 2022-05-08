@@ -6,7 +6,7 @@ class CardItem extends Component {
     state = {
         displayNum: 1,
         btn: true,
-        ePrice: +this.props.price
+        ePrice: this.props.quantity_in_the_basket
     }
 
     handleClick = (e) => {
@@ -42,6 +42,7 @@ class CardItem extends Component {
     delItemClick = (e) => {
         console.log(e)
         const itemDel = this.props.id;
+        console.log(this.props);
         store.dispatch({
             type: 'DELL_ITEM_CART',
             payload: {
@@ -51,7 +52,7 @@ class CardItem extends Component {
     }
 
     render() {
-        const { img, name } = this.props;
+        const { img, name, price, quantity_in_the_basket } = this.props;
         return (
             <div>
                 <hr></hr>
@@ -62,10 +63,10 @@ class CardItem extends Component {
                     <div className='list-item-card__item-title'>{name}</div>
                     <div className='list-item-card__item-buttons'>
                         <button onClick={this.handleClick}>+</button>
-                        <div>{this.state.displayNum}</div>
+                        <div>{quantity_in_the_basket}</div>
                         <button onClick={this.handleClick}>-</button>
                     </div>
-                    <div className='list-item-card__item-price'>{this.state.ePrice} $</div>
+                    <div className='list-item-card__item-price'>{price} $</div>
                     <div className='list-item-card__item-buttons'>
                         <button onClick={this.delItemClick} className='list-item-card__button-X'>X</button>
                     </div>

@@ -19,7 +19,7 @@ class ShopItems extends Component {
     }
 
     render() {
-        const { img, price, id } = this.props;
+        const { img, price, id, sale, sale_count  } = this.props;
         return (
             <div
                 className='shop__items_container'
@@ -32,9 +32,15 @@ class ShopItems extends Component {
                         :
                         'shop__price-raiting'
                     }>
-                    <p className='shop__item-price'>{price}
+                    {/* <p className='shop__item-price'>{price}
                         <span className='shop__item-price__span'> / $ {price}</span>
-                    </p>
+                    </p> */}
+                    {sale === true   ?
+                            <p className='shop__item-price'>$ {+price - (+price * (sale_count / 100))}
+                                <span className='shop__item-price__span'> / $ {price}</span></p>
+                            :
+                            <p className='shop__item-price'>$ {price}</p>
+                        }
                     {/* <div>рейтинг</div> */}
                 </div>
                 <img className='shop__items_container-img' src={img} alt='img' />

@@ -11,6 +11,11 @@ class ListItemCard extends Component {
         cardSum: 0
     }
 
+    totalSum = () => {
+        const  cartSumm  = this.state.cardItem;
+    return cartSumm.reduce((acc, item) => +acc + (+item.price * item.quantity_in_the_basket), 0);
+    }
+
     componentDidMount = () => {
         ApiRequest();
         store.subscribe(() => {
@@ -34,7 +39,7 @@ class ListItemCard extends Component {
                         </div>
                         <hr />
                         <div className='list-item-card__sum-buttons'>
-                            <div className='list-item-card__sum-result'>Total: {this.state.cardSum} $</div>
+                            <div className='list-item-card__sum-result'>Total: {this.totalSum()} $</div>
                             <div className='list-item-card__sum-result-container'>
                                 <Link className='list-item-card__sum-result-link' to='/'>
                                     <div className='list-item-card__button-one'>Continue shopping</div>

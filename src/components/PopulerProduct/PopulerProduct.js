@@ -9,7 +9,23 @@ import { Link } from 'react-router-dom';
 class PopulerProduct extends Component {
 
     state = {
-        data: []
+        data: [],
+        bestSellers: true,
+        specialOffers: false
+    }
+
+    clickBestSellers = () => {
+        this.state.bestSellers === false ?
+            this.setState({ bestSellers: true, specialOffers: false })
+            :
+            this.setState({ bestSellers: true })
+    }
+
+    clickSpecialOffers = () => {
+        this.state.specialOffers === false ?
+            this.setState({ bestSellers: false, specialOffers: true })
+            :
+            this.setState({ specialOffers: true })
     }
 
     componentDidMount = () => {
@@ -33,24 +49,35 @@ class PopulerProduct extends Component {
                             {/* Недавнее прибытие */}
                             <div className='populer-product__navigation-element'>Recent arrival</div>
                             {/* лучшие продавцы */}
-                            <div className='populer-product__navigation-element'>Best sellers</div>
+                            <div onClick={() => this.clickBestSellers()} className='populer-product__navigation-element'>
+                                Best sellers
+                            </div>
                             {/* специальные предложения */}
-                            <div className='populer-product__navigation-element'>Special offers</div>
+                            <div onClick={() => this.clickSpecialOffers()} className='populer-product__navigation-element'>
+                                Special offers
+                            </div>
                             {/* представленный в */}
                             <div className='populer-product__navigation-element'>Featured in</div>
                         </div>
                     </div>
                     <div className='populer-product__items-block'>
-                        {this.state.data && this.state.data.filter((item) =>
-                            item.rating === '5').map((item) => (
-                                <PopulerItems {...item}/>
-                            ))}
+                        {this.state.bestSellers === true ?
+                            this.state.data && this.state.data.filter((item) =>
+                                item.rating === '5').map((item) => (
+                                    <PopulerItems {...item} />
+                                ))
+                            :
+                            this.state.data && this.state.data.filter((item) =>
+                                item.sale === true).map((item) => (
+                                    <PopulerItems {...item} />
+                                ))
+                        }
                     </div>
                     <div className='pupuler-product__view-all-container'>
-                    <Link className='pupuler-product__view-all-button' to="/allItems">
+                        <Link className='pupuler-product__view-all-button' to="/allItems">
                             {/* <div className='pupuler-product__view-all-button'> */}
-                                <p>viev all</p>
-                                <img src={VIEWALL} alt='VIEWALL' />
+                            <p>viev all</p>
+                            <img src={VIEWALL} alt='VIEWALL' />
                             {/* </div> */}
                         </Link>
                     </div>

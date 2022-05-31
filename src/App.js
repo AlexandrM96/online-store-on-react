@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Привет! привет!
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Main from './pages/Main/Main';
+import ListOfProducts from './pages/ListOfProducts/ListOfProducts';
+import ListItemCard from './pages/ListItemCard/ListItemCard'
+import { Route, Routes } from 'react-router-dom';
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <main className='page'>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/allItems" element={<ListOfProducts />} />
+            <Route path="/card" element={<ListItemCard />} />
+          </Routes>
+          <Footer />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

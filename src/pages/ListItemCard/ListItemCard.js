@@ -12,8 +12,8 @@ class ListItemCard extends Component {
     }
 
     totalSum = () => {
-        const  cartSumm  = this.state.cardItem;
-    return cartSumm.reduce((acc, item) => +acc + (+item.price * item.quantity_in_the_basket), 0);
+        const cartSumm = this.state.cardItem;
+        return cartSumm.reduce((acc, item) => +acc + (+item.price * item.quantity_in_the_basket), 0);
     }
 
     componentDidMount = () => {
@@ -22,7 +22,7 @@ class ListItemCard extends Component {
             const state = store.getState();
             this.setState({
                 cardItem: state.cardItems,
-                cardSum: state.cardSum 
+                cardSum: state.cardSum
             });
         });
     };
@@ -34,7 +34,9 @@ class ListItemCard extends Component {
                     <div className='list-item-card__items'>
                         <div className='list-item-card__items-list'>
                             {this.state.cardItem && this.state.cardItem.map((item) => (
-                                <CardItem {...item} />
+                                <div key={item.id}>
+                                    <CardItem {...item} />
+                                </div>
                             ))}
                         </div>
                         <hr />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './RecentProduct.css';
-import RATING from '../../image/Rating.svg';
+// import RATING from '../../image/Rating.svg';
+
 class RecentItem extends Component {
     state = {
         data : []
@@ -26,7 +27,7 @@ class RecentItem extends Component {
                     <div className='recent-product__item-rating'> 
                         {this.state.data && Array.apply(null, { length: +rating }).map((e, i) => (
                             <div className='populer-product__rating-star' key={i}>
-                                <img src={RATING} alt='star' />
+                                <img src='loader/Rating.svg' alt='star' />
                             </div>
                         ))}
                     </div> 

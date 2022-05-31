@@ -29,8 +29,10 @@ class ListOfProducts extends Component {
                     </div>
                     <div className='list-of-product__items-block'>
                         {this.state.data && this.state.data.map((item) => (
-                                <ListOfItems {...item}/>
-                            ))}
+                            <div key={item.id}>
+                                <ListOfItems {...item} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

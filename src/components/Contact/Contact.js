@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
-import load from '../../image/loading_89372.svg';
 
 const Contact = () => {
 
@@ -25,6 +24,7 @@ const Contact = () => {
                 console.log(error.text);
             });
     };
+    
     return (
         <section className='contact'>
             <div className='contact__container'>
@@ -40,7 +40,7 @@ const Contact = () => {
                             name="eMail" />
                         <button className='contact__mail-button'>Subscribe</button>
                         <div className={loadingStatus === false ? 'contact__mail-img-none' : 'contact__mail-img'}>
-                            <img src={load} alt='load' />
+                            <img src='loader/loading_89372.svg' alt='load' />
                         </div>
                     </form>
                 </div>

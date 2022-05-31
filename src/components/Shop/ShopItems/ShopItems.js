@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import '../Shop.css';
 import { ApiRequestAddCart } from '../../../API/ApiRequest';
-// логотипы корзины
-import CART from '../button-img/Group_54.svg';
-import LUPA from '../button-img/Group_55.svg';
-import LIKE from '../button-img/Vector.svg';
-import STRELKI from '../button-img/Group_53.svg';
 
 class ShopItems extends Component {
 
@@ -53,16 +48,16 @@ class ShopItems extends Component {
                     <div className='shop__item-button'
                     onClick={() => this.clickButtonCart(id)} type="button"
                     > 
-                        <img src={CART} alt='CART' />
+                        <img src='buttons_img/Group_54.svg' alt='CART' />
                     </div>
                     <div className='shop__item-button'>
-                        <img src={LUPA} alt='LUPA' />
+                        <img src='buttons_img/Group_55.svg' alt='LUPA' />
                     </div>
                     <div className='shop__item-button'>
-                        <img src={LIKE} alt='LIKE' />
+                        <img src='buttons_img/Vector.svg' alt='LIKE' />
                     </div>
                     <div className='shop__item-button'>
-                        <img src={STRELKI} alt='STRELKI' />
+                        <img src='buttons_img/Group_53.svg' alt='STRELKI' />
                     </div>
                 </div>
             </div>

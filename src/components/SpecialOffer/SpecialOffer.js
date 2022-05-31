@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SpecialOffer.css';
-import DRON from './img/pack_anafi_1.svg';
-import CAMERA from './img/463836_preview_1.svg';
+
 class SpecialOffer extends Component {
     render() {
         return (
@@ -14,7 +13,7 @@ class SpecialOffer extends Component {
                             <p className='special-offer__par-three'>Show Now</p>
                         </div>
                         <div>
-                            <img className='special-offer__img' src={DRON} alt="dron" />
+                            <img className='special-offer__img' src='img/pack_anafi_1.svg' alt="dron" />
                         </div>
                     </div>
                     <div className='special-offer__block'>
@@ -24,7 +23,7 @@ class SpecialOffer extends Component {
                             <p className='special-offer__par-three'>Show Now</p>
                         </div>
                         <div>
-                            <img className='special-offer__img' src={CAMERA} alt="camera" />
+                            <img className='special-offer__img' src='img/463836_preview_1.svg' alt="camera" />
                         </div>
                     </div>
                 </div>

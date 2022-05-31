@@ -3,7 +3,6 @@ import './PopulerProduct.css';
 import { ApiRequest } from '../../API/ApiRequest';
 import store from '../../redux/store';
 import PopulerItems from './PopulerItems/PopulerItems';
-import VIEWALL from './button-img/Group_160.svg';
 import { Link } from 'react-router-dom';
 
 class PopulerProduct extends Component {
@@ -64,12 +63,16 @@ class PopulerProduct extends Component {
                         {this.state.bestSellers === true ?
                             this.state.data && this.state.data.filter((item) =>
                                 item.rating === '5').map((item) => (
-                                    <PopulerItems {...item} />
+                                    <div key={item.id}>
+                                        <PopulerItems {...item} />
+                                    </div>
                                 ))
                             :
                             this.state.data && this.state.data.filter((item) =>
                                 item.sale === true).map((item) => (
-                                    <PopulerItems {...item} />
+                                    <div key={item.id}>
+                                        <PopulerItems {...item} />
+                                    </div>
                                 ))
                         }
                     </div>
@@ -77,7 +80,7 @@ class PopulerProduct extends Component {
                         <Link className='pupuler-product__view-all-button' to="/allItems">
                             {/* <div className='pupuler-product__view-all-button'> */}
                             <p>viev all</p>
-                            <img src={VIEWALL} alt='VIEWALL' />
+                            <img src='buttons_img/Group_160.svg' alt='VIEWALL' />
                             {/* </div> */}
                         </Link>
                     </div>

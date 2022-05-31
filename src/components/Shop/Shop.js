@@ -33,7 +33,9 @@ class Shop extends Component {
                     <div className='shop__items'>
                         {this.state.data && this.state.data.filter((item) =>
                             item.id >= 16).map((item) => (
-                                <ShopItems {...item} />
+                                <div key={item.id}>
+                                    <ShopItems {...item} />
+                                </div>
                             ))}
                     </div>
                 </div>

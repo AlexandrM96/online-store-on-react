@@ -15,22 +15,24 @@ function reducer(state = initialState, action) {
         case 'ADD_ID_Electronics':
             const item = action.payload.idItemCart;
             state.cardItems.push(item);
-            for(let i = 0; i < state.cardItems.length; i++) {
+            for (let i = 0; i < state.cardItems.length; i++) {
                 state.cardItems[i]['quantity_in_the_basket'] = 1;
             }
-            console.log('asasasasddd',state.cardItems)
-            const sum = state.cardSum += parseInt(item.price);
-            return { ...state, ...state.cardItems,  }
+            return { ...state, ...state.cardItems, }
         case 'CHANGING_THE_QUANTITY_OF_GOODS':
-            const plusAndMinus = action.payload.plusMinus;
-            const itemPrice = action.payload.ePrice;
-            plusAndMinus === '+' ? state.cardSum += itemPrice : state.cardSum -= itemPrice;
-            return { ...state, ...state.cardItems,  }
+            let displayNum = action.payload.displayNum;
+            const id = action.payload.itemId;
+            for (let i = 0; i < state.cardItems.length; i++) {
+                if (state.cardItems[i].id === id) {
+                    state.cardItems[i].quantity_in_the_basket = displayNum;
+                };
+            };
+            return { ...state, ...state.cardItems, ...state.cardItems.quantity_in_the_basket }
         case 'DELL_ITEM_CART':
             const del = action.payload.itemDelId;
             console.log(state.cardItems)
             const newCartItems = [...state.cardItems].filter(item => item.id !== del);
-            return { ...state, cardItems: newCartItems,  }
+            return { ...state, cardItems: newCartItems, }
         default:
             return state;
     }

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import LOGO from './img/Group_165.svg';
-import FACEBOOk from './img/Vector.svg';
-import INSTAGRAM from './img/Group_81.svg';
-import TWITTER from './img/Vector_(1).svg';
-import IN from './img/Group_82.svg';
-import YOUTUBE from './img/Group_80.svg';
-import LANG from './img/Group_73.svg';
+
 class Footer extends Component {
     render() {
         return (
@@ -14,7 +8,7 @@ class Footer extends Component {
                 <div className='footer__container'>
                     <div className='footer__logo-block'>
                         <div className='footer_column_logo'>
-                            <img src={LOGO} alt='logo' />
+                            <img src='logo/Group_165.svg' alt='logo' />
                         </div>
                         <p>STORE - worldwide fashion store since 1978. We sell over 1000+ branded products on our web-site.</p>
                     </div>
@@ -54,37 +48,37 @@ class Footer extends Component {
                                 <div>
                                     <a href="https://www.facebook.com/"
                                         className='footer_links'>
-                                        <img className='footer_img_logo' src={FACEBOOk} alt='facebook' />
+                                        <img className='footer_img_logo' src='social-network_logo/Vector.svg' alt='facebook' />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="https://www.instagram.com/"
                                         className='footer_links'>
-                                        <img src={INSTAGRAM} alt='instagram' />
+                                        <img src='social-network_logo/Group_81.svg' alt='instagram' />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="https://www.twitter.com/"
                                         className='footer_links'>
-                                        <img src={TWITTER} alt='twitter' />
+                                        <img src='social-network_logo/Vector_(1).svg' alt='twitter' />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="https://www.in.com/"
                                         className='footer_links'>
-                                        <img src={IN} alt='in' />
+                                        <img src='social-network_logo/Group_82.svg' alt='in' />
                                     </a>
                                 </div>
                                 <div>
                                     <a href="https://www.youtube.com/"
                                         className='footer_links'>
-                                        <img src={YOUTUBE} alt='youtube' />
+                                        <img src='social-network_logo/Group_80.svg' alt='youtube' />
                                     </a>
                                 </div>
                             </div>
                             <div className='footer__select-container'>
                                 <div>
-                                    <img src={LANG} alt="lang" />
+                                    <img src='logo/Group_73.svg' alt="lang" />
                                 </div>
                                 <select className='footer__select-option'>
                                     <option>English</option>

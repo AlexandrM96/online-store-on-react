@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import { ApiRequestAddCart } from '../../../API/ApiRequest';
-// логотипы корзины
-import CART from '../../../button-img/Group_54.svg';
-import LUPA from '../../../button-img/Group_55.svg';
-import LIKE from '../../../button-img/Vector.svg';
-import STRELKI from '../../../button-img/Group_53.svg';
-import RATING from '../../../image/Rating.svg';
 
 class ListOfItems extends Component {
 
@@ -40,7 +34,7 @@ class ListOfItems extends Component {
                         <div className='populer-product-rating'>
                             {this.state.data && Array.apply(null, { length: +rating }).map((e, i) => (
                                 <div className='populer-product__rating-star' key={i}>
-                                    <img src={RATING} alt='star' />
+                                    <img src='loader/Rating.svg' alt='star' />
                                 </div>
                             ))}
                         </div>
@@ -51,16 +45,16 @@ class ListOfItems extends Component {
                             <div className='populer-product__item-button'
                                 onClick={() => this.clickButtonCart(id)} type="button"
                             >
-                                <img src={CART} alt='CART' />
+                                <img src='buttons_img/Group_54.svg' alt='CART' />
                             </div>
                             <div className='populer-product__item-button'>
-                                <img src={LUPA} alt='LUPA' />
+                                <img src='buttons_img/Group_55.svg' alt='LUPA' />
                             </div>
                             <div className='populer-product__item-button'>
-                                <img src={LIKE} alt='LIKE' />
+                                <img src='buttons_img/Vector.svg' alt='LIKE' />
                             </div>
                             <div className='populer-product__item-button'>
-                                <img src={STRELKI} alt='STRELKI' />
+                                <img src='buttons_img/Group_53.svg' alt='STRELKI' />
                             </div>
                         </div>
                         <div className='populer-product__price__raiting__color'>
@@ -74,7 +68,7 @@ class ListOfItems extends Component {
                                 <div className='populer-product-rating'>
                                     {this.state.data && Array.apply(null, { length: +rating }).map((e, i) => (
                                         <div className='populer-product__rating-star' key={i}>
-                                            <img src={RATING} alt='star' />
+                                            <img src='loader/Rating.svg' alt='star' />
                                         </div>
                                     ))}
                                 </div>

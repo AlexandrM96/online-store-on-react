@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Aboute.css';
-import GIRL from './img/Mask_Group.svg';
+
 class Aboute extends Component {
     render() {
         return (
             <section className='aboute'>
                 <div className='aboute__container'>
                     <div className='class_img'>
-                        <img className='aboute__img' src={GIRL} alt='girl' />
+                        <img className='aboute__img' src='img/Mask_Group.svg' alt='girl' />
                     </div>
                     <div className='aboute__info'>
                         <h4>Aboute product</h4>

@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import './Header.css';
 import store from '../../redux/store';
 import { Link } from 'react-router-dom';
-import Group_10 from './img/Group_10.svg';
-import Group_12 from './img/Group_12.svg';
-import Group_15 from './img/Group_15.svg';
-import Group_165 from './img/Group_165.svg';
+
+
 class Header extends Component {
     state = {
         cardLength: [],
@@ -26,7 +24,7 @@ class Header extends Component {
             <header className="header">
                 <div className='header__container'>
                     <div className="header__logo">
-                        <img src={Group_165} alt="logo" />
+                        <img src='logo/Group_166.svg' alt="logo" />
                     </div>
                     <ul className="header__navigation">
                         <li>
@@ -50,11 +48,11 @@ class Header extends Component {
                     </ul>
                     <div className="header__user-space">
                         <div className="header__user-space-item">
-                            <img src={Group_10} className="load__img" alt="magnifier" />
+                            <img src='buttons_img/Group_10.svg' className="load__img" alt="magnifier" />
                         </div>
                         <div className="header__user-space-item header__user-сard">
                             <Link to="/card">
-                                <img src={Group_12} className="load__img" alt="cart" />
+                                <img src='buttons_img/Group_12.svg' className="load__img" alt="cart" />
                             </Link>
                             <div className={
                                 lengthCard === 0 ?
@@ -64,7 +62,7 @@ class Header extends Component {
                             >{lengthCard}</div>
                         </div>
                         <div className="header__user-space-item">
-                            <img src={Group_15} className="load__img" alt="auth" />
+                            <img src='buttons_img/Group_15.svg' className="load__img" alt="auth" />
                         </div>
                     </div>
                 </div>

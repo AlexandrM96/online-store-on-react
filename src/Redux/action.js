@@ -8,12 +8,23 @@ const addCart = {
     text: 'Id Electronics'
 }
 
-const addItemCart = {
-    type: 'CHANGING_THE_QUANTITY_OF_GOODS',
-    text: 'changing the quantity of goods'
-}
+// const addItemCart = {
+//     type: 'CHANGING_THE_QUANTITY_OF_GOODS',
+//     text: 'changing the quantity of goods'
+// }
 
 const delItemCart = {
     type: 'DELL_ITEM_CART',
     text: 'Dell item cart'
+}
+
+export function addQuantity(displayNum, itemId, plusMinus) {
+    return {
+        type: 'CHANGING_THE_QUANTITY_OF_GOODS',
+        payload: {
+            displayNum: displayNum,
+            itemId: itemId,
+            plusMinus: plusMinus
+        }
+    }
 }

@@ -1,0 +1,101 @@
+.hero-aria {
+  width: 1600px;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 230px;
+  padding-right: 144px;
+}
+
+.hero-aria__article-one {
+
+  width: 46%;
+  margin-right: 26px;
+}
+
+.hero-aria__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  color: #dd7c86;
+  margin-top: 129px;
+  margin-bottom: 0px;
+}
+
+.hero-aria__paragraph-one {
+  font-weight: 600;
+  font-size: 61px;
+  line-height: 73px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.hero-aria__paragraph-span {
+  color: #247cc0;
+  background: #e9f2f9;
+  padding: 5px;
+}
+
+.hero-aria__paragraph-two {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #757a7f;
+  margin-top: 29px;
+  margin-bottom: 56px;
+}
+
+.hero-aria__shop-price {
+  display: flex;
+}
+
+.hero-aria__button {
+  background: #247cc0;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  padding: 16px 35px;
+}
+
+.hero-aria__price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #030d15;
+  padding-left: 21px;
+}
+
+.hero-aria__price-span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  text-decoration-line: line-through;
+  color: #94999c;
+}
+
+.hero-aria__article-two {
+  margin-top: 54px;
+}
+
+.hero-aria__brands {
+  display: flex;
+  padding: 76px 118px;
+  box-shadow: 0px 100px 80px rgba(174, 174, 174, 0.08),
+    0px 43.751px 36.4414px rgba(174, 174, 174, 0.0575083),
+    0px 19.8401px 19.1406px rgba(174, 174, 174, 0.0476886),
+    0px 6.77214px 9.61331px rgba(174, 174, 174, 0.04),
+    0px 0.190079px 4.14347px rgba(174, 174, 174, 0.0323114),
+    0px -1.73968px 1.20532px rgba(174, 174, 174, 0.0224916);
+  border-radius: 0px;
+  margin-bottom: 132px;
+}
+
+.hero-aria__brand {
+  margin-right: 84px;
+}

@@ -1,0 +1,25 @@
+.list-of-product__container {
+    width: 1600px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 230px;
+    padding-right: 144px;
+  }
+
+  .list-of-product__header {
+    text-align: center;
+  }
+
+  .list-of-product__header h2 {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 71px;
+    margin: 50 0 20 0;
+    color: rgb(192, 95, 95);
+  }
+
+  .list-of-product__items-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }

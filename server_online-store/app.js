@@ -5,11 +5,12 @@ const analyticsRoutes = require('./routres/analytics');
 const categoryRoutes = require('./routres/category');
 const orderRoutes = require('./routres/order');
 const positionRoutes = require('./routres/position');
+const itemRoutes = require('./routres/item');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const passport = require('passport');
-const { default: mongoose } = require('mongoose');
+const { mongoose } = require('mongoose');
 
 mongoose.connect('mongodb://localhost/myStore')
 .then(() => console.log('MongoDB connected.'))
@@ -23,6 +24,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('/api/item', itemRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/category', categoryRoutes);

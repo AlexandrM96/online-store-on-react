@@ -17,7 +17,6 @@ class PopulerProduct extends Component {
         bestSellers: true,
         specialOffers: false
     }
-
     clickBestSellers = () => {
         this.state.bestSellers === false ?
             this.setState({ bestSellers: true, specialOffers: false })
@@ -31,9 +30,12 @@ class PopulerProduct extends Component {
             :
             this.setState({ specialOffers: true })
     }
+    
+    componentDidMount = () => {
+        ApiRequest();
+    }
 
     render() {
-        ApiRequest();
         return (
             <section className='populer-product'>
                 <div className='populer-product__container'>

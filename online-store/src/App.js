@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
 import ListOfProducts from './pages/ListOfProducts/ListOfProducts';
 import ListItemCard from './pages/ListItemCard/ListItemCard';
-import Register from './pages/Register/Register';
+import Auth from './pages/Auth/Auth';
 import { Route, Routes } from 'react-router-dom';
 class App extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class App extends React.Component {
             <Route path="/" element={<Main />} />
             <Route path="/allItems" element={<ListOfProducts />} />
             <Route path="/card" element={<ListItemCard />} />
-            <Route path ="/registration" element={<Register />} />
+            <Route path ="/auth" element={<Auth />} />
           </Routes>
           <Footer />
         </main>

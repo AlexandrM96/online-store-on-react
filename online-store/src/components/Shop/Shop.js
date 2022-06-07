@@ -12,8 +12,11 @@ const mapStateToProps = (state) => {
 
 class Shop extends Component {
 
-    render() {
+    componentDidMount = () => {
         ApiRequest();
+    }
+
+    render() {
         return (
             <section className='shop'>
                 <div className='shop__container'>

@@ -11,9 +11,12 @@ const mapStateToProps = (state) => {
 };
 
 class RecentProduct extends Component {
-   
-    render() {
+
+    componentDidMount = () => {
         ApiRequest();
+    }
+
+    render() {
         return (
             <section className='recent-product'>
                 <div className='recent-product__items'>

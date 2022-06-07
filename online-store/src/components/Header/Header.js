@@ -69,7 +69,7 @@ class Header extends Component {
                             >{lengthCard}</div>
                         </div>
                         <div className="header__user-space-item">
-                            <Link to="/registration">
+                            <Link to="/auth">
                                 <img src='buttons_img/Group_15.svg' className="load__img" alt="auth" />
                             </Link>
                         </div>

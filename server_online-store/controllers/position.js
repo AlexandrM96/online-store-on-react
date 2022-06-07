@@ -5,7 +5,7 @@ const errorHandler = require('../utils/errorHandler');
 module.exports.getByCategoryId = async function (req, res) {
     try {
         const positions = await Position.find({
-            categoty: req.params.categotyId,
+            categoty: req.params.categoryId,
             user: req.user.id
         })
         res.status(200).json(positions)

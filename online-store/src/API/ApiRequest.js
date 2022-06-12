@@ -44,7 +44,7 @@ export function ApiRequestAddCart(id) {
 export async function RegistrationUser(name, phone, email, password) {
 
     const url = `http://localhost:5000/api/auth/register`;
-    fetch(url, {
+    await fetch(url, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -75,7 +75,7 @@ export async function RegistrationUser(name, phone, email, password) {
 export async function LoginUser(email, password) {
 
     const url = `http://localhost:5000/api/auth/login`;
-    fetch(url, {
+    await fetch(url, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

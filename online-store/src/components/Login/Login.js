@@ -2,8 +2,12 @@ import React, { useState } from 'react'
 import './Login.css'
 import validator from 'validator';
 import { LoginUser } from '../../API/ApiRequest';
+import { useNavigate } from "react-router-dom";
+import store from '../../redux/store';
 
 export default function Login() {
+
+    const navigate = useNavigate();
 
     const [register, setRegister] = useState(() => {
         return {
@@ -36,6 +40,16 @@ export default function Login() {
         }
     }
 
+    const clickButtonSignIn = event => {
+        event.preventDefault();
+        store.dispatch({
+            type: 'STATUS_USER_ACCOUNT',
+            payload: {
+                statusReg: true
+            }
+        })
+    }
+
     return (
         <div className="login">
             <h2 className="login__title">Login:</h2>
@@ -63,9 +77,17 @@ export default function Login() {
                         onChange={changeInputRegister}
                     />
                 </p>
-                <input className="login__form-button"
-                    value={'Login'}
-                    type="submit" />
+                <div className='login__form-buttons'>
+                    <input className="login__form-button"
+                        value={'Login'}
+                        type="submit" />
+                    <button
+                        className="login__form-button"
+                        onClick={clickButtonSignIn}
+                    >
+                        Sign in
+                    </button>
+                </div>
             </form>
         </div>
     )

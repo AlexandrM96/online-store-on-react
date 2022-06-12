@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import './Registration.css';
 import validator from 'validator';
 import { RegistrationUser } from '../../API/ApiRequest';
+import store from '../../redux/store';
+import { useNavigate } from 'react-router-dom';
 
 export default function Registration() {
 
+    const navigate = useNavigate;
     const [register, setRegister] = useState(() => {
         return {
             username: "",
@@ -41,7 +44,23 @@ export default function Registration() {
             const email = register.email;
             const password = register.password;
             RegistrationUser(name, phone, email, password);
+            store.dispatch({
+                type: 'STATUS_USER_ACCOUNT',
+                payload: {
+                    statusReg: false
+                }
+            })
+            navigate("../auth");
         }
+    }
+
+    const clickButtonSignIn = event => {
+        store.dispatch({
+            type: 'STATUS_USER_ACCOUNT',
+            payload: {
+                statusReg: false
+            }
+        })
     }
 
     return (
@@ -107,7 +126,8 @@ export default function Registration() {
                 </p>
                 <input className="registration__form-button"
                     value={'Sign in'}
-                    type="submit" />
+                    type="submit"
+                />
             </form>
         </div>
     )

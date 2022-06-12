@@ -18,6 +18,11 @@ const delItemCart = {
     text: 'Dell item cart'
 }
 
+const statusReg = {
+    type: 'STATUS_USER_ACCOUNT',
+    text: 'status_account'
+}
+
 export function addQuantity(displayNum, itemId, plusMinus) {
     return {
         type: 'CHANGING_THE_QUANTITY_OF_GOODS',

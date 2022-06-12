@@ -3,7 +3,8 @@ const initialState = {
     items: [],
     newItems: [],
     cardItems: [],
-    cardSum: 0
+    cardSum: 0,
+    registration: false
 
 }
 
@@ -12,7 +13,7 @@ function reducer(state = initialState, action) {
         case 'ADD_API_Electronics':
             const api = action.payload.result;
             const newItems = [...state.items, api];
-            return { ...state, newItems:newItems }
+            return { ...state, newItems: newItems }
         case 'ADD_ID_Electronics':
             const item = action.payload.idItemCart;
             state.cardItems.push(item);
@@ -34,6 +35,9 @@ function reducer(state = initialState, action) {
             console.log(state.cardItems)
             const newCartItems = [...state.cardItems].filter(item => item.id !== del);
             return { ...state, cardItems: newCartItems, }
+        case 'STATUS_USER_ACCOUNT':
+            const status = action.payload.statugReg;
+            return { ...state, registration: status }
         default:
             return state;
     }

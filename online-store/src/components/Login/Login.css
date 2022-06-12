@@ -14,7 +14,7 @@
 }
 
 .login__form-paragraph {
-    color: rgb(55, 54, 54);
+  color: rgb(55, 54, 54);
 }
 
 .login__form-input {
@@ -26,11 +26,16 @@
   color: black;
 }
 
+.login__form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .login__form-button {
   cursor: pointer;
   background: #496ddb;
   color: white;
-  margin-left: 38%;
+  margin-right: 10px;
   padding: 5px 40px;
   font-size: 20px;
   border: 1px solid white;

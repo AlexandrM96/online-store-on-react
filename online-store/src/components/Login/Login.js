@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import './Login.css'
 import validator from 'validator';
 import { LoginUser } from '../../API/ApiRequest';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
 import store from '../../redux/store';
 
 export default function Login() {
 
     const navigate = useNavigate();
+
+    // const history = useHistory();
 
     const [register, setRegister] = useState(() => {
         return {
@@ -37,6 +39,8 @@ export default function Login() {
             const email = register.email;
             const password = register.password;
             LoginUser(email, password);
+            navigate("/profile");
+            // history.push('/profile');
         }
     }
 

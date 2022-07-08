@@ -44,13 +44,12 @@ export default function Registration() {
             const email = register.email;
             const password = register.password;
             RegistrationUser(name, phone, email, password);
-            store.dispatch({
-                type: 'STATUS_USER_ACCOUNT',
-                payload: {
-                    statusReg: false
-                }
-            })
-            navigate("../auth");
+            // store.dispatch({
+            //     type: 'STATUS_USER_ACCOUNT',
+            //     payload: {
+            //         statusReg: false
+            //     }
+            // })
         }
     }
 

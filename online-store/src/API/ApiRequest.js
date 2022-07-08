@@ -1,5 +1,4 @@
 import store from "../redux/store";
-// import axios from 'axios';
 
 //общий запрос
 export function ApiRequest() {
@@ -60,6 +59,12 @@ export async function RegistrationUser(name, phone, email, password) {
         .then((response) => response.json())
         .then((data) => {
             if (!data.message) {
+                store.dispatch({
+                    type: 'STATUS_USER_ACCOUNT',
+                    payload: {
+                        statusReg: false
+                    }
+                })
                 alert("Аккаунт создан");
             } else {
                 alert(data.message);
@@ -90,6 +95,8 @@ export async function LoginUser(email, password) {
         .then((data) => {
             if (!data.message) {
                 alert("Успешно!");
+                localStorage.setItem('token', data.token);
+                console.log(data.token);
             } else {
                 alert(data.message);
             }

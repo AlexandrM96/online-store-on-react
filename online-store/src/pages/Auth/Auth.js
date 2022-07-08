@@ -3,6 +3,7 @@ import './Auth.css'
 import Registration from '../../components/Registration/Registration';
 import Login from '../../components/Login/Login';
 import { connect } from 'react-redux';
+import store from '../../redux/store';
 
 const mapStateToProps = (state) => {
     return {
@@ -15,8 +16,19 @@ class Auth extends Component {
         regist: false
     }
 
+    componentDidMount = () => {
+        store.subscribe(() => {
+            const state = store.getState();
+            this.setState({
+                regist: state.registration
+                
+            });
+        });
+    }
+
     render() {
         const reg = this.props.registration;
+        console.log(this.props);
         return (
             <div className='auth'>
                 <div className='auth__container'>

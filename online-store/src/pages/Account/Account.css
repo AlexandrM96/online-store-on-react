@@ -1,0 +1,36 @@
+.account__title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 71px;
+  margin: 10px 0px 20px 0px;
+  color: rgb(192, 95, 95);
+  text-align: center;
+}
+
+.account__container-navigate {
+  padding: 30px;
+  border-radius: 7px;
+  border: 2px solid #0b6ab3;
+  width: 10%;
+  text-align: center;
+  margin: 81px 0;
+}
+
+.account__container-navigate__element {
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid #0b6ab3;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  color: #247cc0;
+  background: #e9f2f9;
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.account__container-navigate__element:hover {
+    color: #0c6cb5;
+    background: #bad1e3;
+    transform: scale(1.1);
+    transition: 0.6s;
+  }

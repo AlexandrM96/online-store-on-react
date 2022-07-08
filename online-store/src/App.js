@@ -8,6 +8,7 @@ import ListItemCard from './pages/ListItemCard/ListItemCard';
 import Auth from './pages/Auth/Auth';
 import Account from './pages/Account/Account';
 import { Route, Routes } from 'react-router-dom';
+
 class App extends React.Component {
   render() {
     return (
@@ -19,7 +20,7 @@ class App extends React.Component {
             <Route path="/allItems" element={<ListOfProducts />} />
             <Route path="/card" element={<ListItemCard />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path='/account' element={<Account />} />
+            <Route path='/profile' element={<Account />} />
           </Routes>
           <Footer />
         </main>

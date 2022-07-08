@@ -36,7 +36,8 @@ function reducer(state = initialState, action) {
             const newCartItems = [...state.cardItems].filter(item => item.id !== del);
             return { ...state, cardItems: newCartItems, }
         case 'STATUS_USER_ACCOUNT':
-            const status = action.payload.statugReg;
+            const status = action.payload.statusReg;
+            console.log(status);
             return { ...state, registration: status }
         default:
             return state;
